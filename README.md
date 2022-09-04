@@ -1,7 +1,7 @@
 # DeColDer
 A Wordle inspired color puzzle game.
-This was my final project for my Programming 2 class
-Ivan Yu, Albert Chen, Benjamin Cheung
+
+This was my final project for my Programming 2 class that I worked on with fellow classmates Albert Chen and Benjamin Cheung.
 
 Run DeColDerVFinal.java.
 
