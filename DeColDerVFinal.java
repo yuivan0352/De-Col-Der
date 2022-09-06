@@ -237,6 +237,7 @@ public class DeColDerVFinal extends JFrame {
         if (con == 3 || con == 0) {
             rowNum = 0;
             colNum = 0;
+            guesses = 0;
 
             for (int i = 0; i < spaces.length; i++) {
                 for (int j = 0; j < spaces[0].length; j++) {
@@ -306,13 +307,15 @@ public class DeColDerVFinal extends JFrame {
                     if (checkforWin()) {
                         con = JOptionPane.showConfirmDialog(null, "You Won!\nWould you like to play again?");
                         resetGame();
-                    } else if (guesses == 5) {
+                    } else if (guesses == 4) {
                         con = JOptionPane.showConfirmDialog(null, "Nice try!\nWould you like to play again?");
                         resetGame();
                     } else {
                         colNum = 0;
                         rowNum++;
                         guesses++;
+                        for (int i = 0; i < guess.length; i++)
+                            guess[i] = null;
                     }
                 } catch (notFullException ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage());
