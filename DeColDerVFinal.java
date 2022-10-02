@@ -237,7 +237,6 @@ public class DeColDerVFinal extends JFrame {
         if (con == 3 || con == 0) {
             rowNum = 0;
             colNum = 0;
-            guesses = 0;
 
             for (int i = 0; i < spaces.length; i++) {
                 for (int j = 0; j < spaces[0].length; j++) {
@@ -252,9 +251,10 @@ public class DeColDerVFinal extends JFrame {
 
             answerSequence.clear();
             createAnswerSequence();
-        } else if (con == 1) {
+        } else if (con == 1 || con == 2 || con == -1) {
             System.exit(0);
         }
+        guesses = 0;
     }
 
     private class ButtonListener implements ActionListener {
@@ -314,8 +314,6 @@ public class DeColDerVFinal extends JFrame {
                         colNum = 0;
                         rowNum++;
                         guesses++;
-                        for (int i = 0; i < guess.length; i++)
-                            guess[i] = null;
                     }
                 } catch (notFullException ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage());
